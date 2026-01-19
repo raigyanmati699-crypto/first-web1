@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login.hiretrix</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'poppins', sans-serif;
+        }
+        #bg-vid {
+           position: fixed;
+           object-fit: cover;
+           top: 0;
+           left: 0; 
+           width: 100%;
+           height: 100%;
+           z-index: -1;
+           animation: slowZoom s ease-in-out infinite alternate;
+        }
+        @keyframes slowZoom {
+           from {transform: scale(1);}
+           to {transform: scale(1.15);}
+        }
+        .faltu {
+            margin-top: 40px;
+        }
+        .by1 {
+            margin: 0px;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+        .login-box {
+            position: relative;
+            top: 10vh;
+            margin: 10px;
+            height: 500px;
+            width: 400px;
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            animation: zoomIn 0.6s ease-in;
+        }
+        .input-box {
+            position: relative;
+            margin-bottom: 25px;
+            color: #ffffff;
+        }
+        .input-box input {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-bottom: 2px solid #ffffff;
+            color: rgb(255, 255, 255);
+            background: none;
+            outline: none;
+            font-size: 16px;
+        }
+        .input-box label {
+            position: absolute;
+            left: 0;
+            bottom: 10px;
+            pointer-events: none;
+            transition: 0.3s;
+        }
+        .input-box input:focus ~ label,
+        .input-box input:valid ~ label {
+            transform: translateY(-25px);
+            font-size: 12px;
+            color: #ffffff;
+        }
+        .btn {
+            margin-top: auto;
+            flex-direction: column;
+            justify-content: end;
+            width: 100%;
+            height: 58px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            background-color: #00000000;
+            color: #ffffff;
+        }
+        .btn:hover {
+            background-color: #3571ff;
+            color: white;
+            transform: scale(1.05);
+        }
+        .bse {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            position: relative;
+            justify-content: center;
+            margin-top: auto;
+        }
+        .clomn {
+            top: 10vh;
+            height: 500px;
+            width: 100%;
+            box-shadow: 0 0 10px rgb(255, 255, 255);
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
+            color: rgb(255, 255, 255);
+            border-radius: 20px;
+            background-color: rgba(0, 0, 0, 0);
+            backdrop-filter: blur(12px);
+            border-width: 4px solid #ffffff;
+            animation: zoomIn 0.6s ease-in;
+        }
+        @keyframes zoomIn {
+            from {opacity: 0;transform: scale(1.1);}
+            to {opacity: 1;transform: scale(1);}
+        }
+        .bg-img {
+            top: 0;
+            left: 0;
+            position: fixed;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-self: center;
+            overflow: hidden;
+            z-index: -5;
+            padding: auto;
+            animation: zoomOut 0.6s ease-in ;
+        }
+        @keyframes zoomOut {
+            from {transform: scale(1.1);}
+            to {transform: scale(1);}
+        }
+        .log-inf {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 900;
+            font-size: 40px;
+            color: rgb(255, 255, 255);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            margin: auto;
+            /* text-shadow: 0 0 10 black; */
+        }
+        .input-checkbox {
+            margin: auto;
+            display: flex;
+            justify-content: left;
+            margin: 8px;
+        }
+        .r-m {
+            padding: 7px;
+            color: white;
+        }
+        .btn-psn {
+            height: 100%;
+            width: 100%;
+            position: relative;
+            display: flex;
+            justify-content: end;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body class="by1">
+    <video id="bg-vid" muted ><source src="c:\Users\HOME\Downloads\flower.mp4"></video>
+    <!-- <img src="c:\Users\HOME\Downloads\mount.jpg" alt="" srcset="c:\Users\HOME\Downloads\mount.jpg" class="bg-img"> -->
+    <div class="bse">
+        <div class="login-box">
+            <h1 class="log-inf">Login form</h1>
+
+            <form class="faltu">
+                <div class="input-box">
+                    <input type="text" required>
+                    <label>Username</label>
+                </div>
+
+                <div class="input-box">
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+
+                <div class="input-checkbox">
+                    <input type="checkbox">
+                    <p class="r-m">Remember me</p>
+                </div>
+
+                <div class="btn-psn">
+                    <button onclick="window.open('hiretrix.html')" type="submit" class="btn">log in</button>
+                </div>
+
+            </form>
+            don't fill any info pls, its prototype!
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    console.log("hello world");
+
+ const vid =
+    document.getElementById("bg-vid");
+    vid.play();
+    vid.addEventListener("ended",()=>{
+        vid.pause();
+    });
+</script>

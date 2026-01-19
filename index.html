@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>first web xD</title>
+</head>
+
+<style>
+ .body {
+    margin: 0;
+    text-align: center;
+}
+.pg1 {
+    height: 100vh;
+    scroll-snap-type: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #00000000;
+}
+#bg-vid {
+    position: fixed;
+    object-fit: cover;
+    top: 0;
+    left: 0; 
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.glow {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle,rgba(0, 119, 255, 0.486) );
+    filter: blur(60px);
+    top: 20%;
+    left: 10%;
+    animation: float 6s ease-in-out infinite alternate;
+}
+@keyframes float {
+    from {transform: translateY(0);}
+    to {transform: translateY(25px);}
+}
+.bs1 {
+    color: #ffffff;
+    background: linear-gradient(#092750,#ffffff00); 
+    box-shadow: 0 0 12px black;
+    padding: 20px;
+    box-shadow:0 0 11px  color;
+    margin-top: 10px;
+    margin: 8px;
+    display: flex;
+    height: 80vh;
+    border-radius: 20px 20px 0px 0px; /* was 16px */
+    font-family: Arial, Helvetica, sans-serif;
+    flex-direction: column;
+    z-index: -5; 
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 255, 255, 0.048);
+    animation: fadeUp 1s ease-out forwards;
+}
+@keyframes fadeUp {
+from {
+        opacity: 0;}
+    to {
+        opacity: 1;}
+}
+.img-logo {
+    width: 90px;
+    height: 90px;
+    display: flex;
+}
+.log-in {
+    padding: 10px;
+    position: relative;
+    height: 40px;
+    width: 80px;
+    box-shadow: 0 0 10px black;
+    border-radius: 16px;
+    border-width: 0px;
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    /* font-family: cursive; */
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+    z-index: 5;
+    cursor: pointer;
+    margin-top: 40px;
+    margin-left: auto;
+}
+.log-in:hover {
+    transform: scale(1.1);
+    color: #ffffff;
+    background-color: #092750;
+}
+.cont1 {
+    display: flex;
+    justify-content: flex-end;
+    z-index: 5;
+    top: -11vh;
+    position: relative;
+}
+.logo-nm {
+    font-family: fantasy;
+    justify-content: center;
+    display: flex;
+    position: relative;
+    font-size: 90px;
+    margin: 20px;
+}
+.head {
+    justify-content: center;
+    /* font-family: cursive; */
+    display: flex;
+    position: relative;
+    margin: 0px;
+}
+.k-m {
+    padding: 8px;
+    height: 40px;
+    width: 100px;
+    box-shadow: 0 0 10px black;
+    border-radius: 16px;
+    border-width: 0px;
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    /* font-family: cursive; */
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+    z-index: 5;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.k-m:hover {
+    transform: scale(1.1);
+    color: #ffffff;
+    background-color: #092750;   
+}
+.nd-pg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    /* border-radius: 12px; */
+    box-shadow: 0 0 10px black;
+    color: #000000;
+    background: linear-gradient(#ffffff);
+    box-shadow:0 0 11px  color;
+    margin-top: -20px;
+    display: flex;
+    height: 92vh;
+    font-family: Arial, Helvetica, sans-serif;
+    flex-direction: column;
+    align-items: flex-start;
+    backdrop-filter: blur(20px); /* dont touch this line i beg u pls*/
+    z-index: 10;   
+    animation: expandin 2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+</style>
+
+<body class="body">
+    <video id="bg-vid" muted ><source src="c:\Users\HOME\Downloads\flower.mp4"></video>
+        <div class="bs1">
+     <!-- <img src="c:\Users\HOME\Downloads\Untitled14_20251129210020.png" class="img-logo">  -->
+        <div class="cont1"></div>
+            <button onclick="window.open('login.html','_blank')" id="loginbtn" class="log-in">log-in</button>
+            <!-- <div class="glow"></div> -->
+            <h1 class="logo-nm">Hi, iam Ansh</h1>
+            <h3 class="head">Simplify your ideas with elegant UI/UX.</h3>
+            <button onclick="window.open('getstarted.html','_blank')" class="k-m">Know more?</button>
+            </div>
+        </div>
+        <div class="nd-pg">
+            <h1>work in progress</h1>
+        </div>
+    <script src="script.js"></script>
+</body>
+</html>

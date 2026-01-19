@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<style>
+    #bg-vid {
+    position: fixed;
+    object-fit: cover;
+    top: 0;
+    left: 0; 
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    animation: slowZoom s ease-in-out infinite alternate;
+}
+@keyframes slowZoom {
+    from {transform: scale(1);}
+    to {transform: scale(1.15);}
+}
+    .bdy {
+        margin: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .bs1 {
+        height: 90vh;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 010px;
+        margin-bottom: 8px;
+        /* display: flex; */
+        /* justify-content: center; */
+        border-radius: 12px;
+        background-color: #58805d85;
+        backdrop-filter: blur(12px);
+        box-shadow: 0 0 10px black;
+        animation: fadeIn 0.7s ease-in ;
+        z-index: 2;
+    }
+    @keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity: 1;} 
+        /* from { */
+    }     
+     .cont-1 {
+        margin: 14px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        /* position: relative; */
+        height: 80vh;
+        width: 90vw;
+        margin: 30px;
+        border-radius: 16px;
+        background-color: #dfffdd;
+        color: #223017;
+        z-index: 5;
+        box-shadow: 0 0 10px #223017;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 10px;
+        font-size: 40px;
+     }
+     .head-1 {
+        position: absolute;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 10px;
+        font-size: 40px;
+
+     }
+     .g-b {
+        padding: 8px;
+        height: 40px;
+        width: 100px;
+        box-shadow: 0 0 10px black;
+        border-radius: 16px;
+        border-width: 0px;
+        color: rgb(0, 0, 0);
+        background-color: #ffffff;
+        /* font-family: cursive; */
+        font-weight: bold;
+        transition: 0.4s ease-in-out;
+        z-index: 5;
+        justify-content: center;
+        margin-right: auto;
+        margin-left: auto;
+        cursor: pointer;
+        margin-top: 20px;
+     }
+     .g-b:hover {
+        transform: scale(1.1);
+        color: #ffffff;
+        background-color: #165009; 
+     }
+</style>
+<body class="bdy">
+    <video id="bg-vid" muted ><source src="c:\Users\HOME\Downloads\green flower.mp4"></video>
+    <div class="bs1">
+         <div class="cont-1">
+            <div class="txt-1">
+                <h2>Are u intrested?</h2>
+                <h6>And if you are then i can't do any thing, but you can until i code :)</h6>
+                <button onclick="window.open('index.html')" class="g-b">go back</button>  
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script>
+    console.log("hello world");
+
+ const vid =
+    document.getElementById("bg-vid");
+    vid.play();
+    vid.addEventListener("ended",()=>{
+        vid.pause();
+    });
+</script>
